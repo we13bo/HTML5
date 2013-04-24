@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!--本文件(实例)主要研究CSS3的属性选择器(attribute selectors),需要注意的是"^="跟"$="的位置-->
+<html lang="zh-cn">
+  <head>
+		<title> CSS3 属性选择器实例 </title>
+		<meta charset="utf-8">
+		<meta name="Author" content="Why_BoBo">
+		<style>
+			a{text-decoration:none;display:block;margin-bottom:10px} /*a标签默认为内联元素，转化为块元素*/
+			a::selection{background-color:red;color:white} /*a标签被选择时的背景、字体*/
+			a[href^="http:"]{		/*匹配所有有效超链接*/
+				background:url(img/window.png) no-repeat left center;
+				padding-left:30px
+			}
+			a[href$="rar"]{			/*匹配所有后缀为rar的链接*/
+				background:url(img/rar.png) no-repeat left center;
+				padding-left:30px			
+			}
+			a[href$="ppt"]{			/*匹配所有后缀为ppt的链接*/
+				background:url(img/ppt.png) no-repeat left center;
+				padding-left:30px			
+			}
+			a[href$="pdf"]{			/*匹配所有后缀为pdf的链接*/
+				background:url(img/pdf.png) no-repeat left center;
+				padding-left:30px			
+			}
+			a[href$="xls"]{			/*匹配所有后缀为xls的链接*/
+				background:url(img/xls.png) no-repeat left center;
+				padding-left:30px			
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>超级链接类型标识图标</h2>
+		<a href="http://www.baidu.com/name.rar">rar文档</a>
+		<a href="http://www.baidu.com/name.ppt">ppt文档</a>
+		<a href="http://www.baidu.com/name.pdf">pdf文档</a>
+		<a href="http://www.baidu.com/name.xls">xls文档</a>
+		<a href="http://www.google.com">Contact</a>
+	</body>
+</html>
